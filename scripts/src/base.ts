@@ -53,10 +53,7 @@ async function baseScript(command: string, isFilterWorkspace: boolean) {
         message: `Choose the package to run ${command} script: `,
         name: 'packages',
         choices,
-        validate: function (val) {
-          if (val && val.length) return true
-          return 'Please choose at least one: '
-        },
+        min: 1,
       },
     ])
 

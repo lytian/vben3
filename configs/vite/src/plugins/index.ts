@@ -61,7 +61,7 @@ export async function configVitePlugins(
   // http2
   vitePlugins.push(configHttpsPlugin(viteEnv))
   // monacoEditorPlugin
-  vitePlugins.push(monacoEditorPlugin({}))
+  vitePlugins.push(monacoEditorPlugin({}) as PluginOption)
   // MonorepoSupport
   vitePlugins.push(MonoRepoAliasPlugin())
 
